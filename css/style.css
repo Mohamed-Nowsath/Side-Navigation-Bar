@@ -1,0 +1,106 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    margin-top: 50px;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    background-color: teal;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+.logo{
+    letter-spacing: 5px;
+    font-size:30px;
+    font-style:oblique;
+    color: white;
+    font-weight:700;
+}
+.header button{
+    width: 50px;
+    flex-shrink: 0;
+    font-size: 30px;
+    background: none;
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.bar{
+    width: 100%;
+    height: 3px;
+    background-color: white;
+}
+.links{
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    height: 100vh;
+    width: 250px;
+    background-color:#fff;
+    
+}
+.link{
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    font-weight:500;
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+}
+.link.active,
+.link:hover{
+    color: red;
+    background-color: #eee;
+}
+.links{
+    transform: translateX(-250px);
+    transition: 0.5s;
+}
+.para{
+    padding: 10px;
+    background-color: aquamarine;
+}
+.open  .links{
+    transform: translateX(0px);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+.nav_overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    backdrop-filter: blur(2px);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.open .nav_overlay{
+    visibility: visible;
+    opacity: 1;
+
+}
+.insta{
+    background: url(../);
+    position: absolute;
+    justify-content: center;
+}
